@@ -18,7 +18,7 @@ WAFFLE_MAX_LIN_VEL = 0.26
 WAFFLE_MAX_ANG_VEL = 1.82
 
 LIN_VEL_STEP_SIZE = 0.002
-ANG_VEL_STEP_SIZE = 0.02
+ANG_VEL_STEP_SIZE = 0.05
 
 
 cap = cv2.VideoCapture(0)
@@ -308,7 +308,8 @@ if __name__=="__main__":
     while(1):
         success, img = cap.read()
         # img = cv2.imread("data/test.jpg", cv2.IMREAD_COLOR)
-        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        # imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        imgRGB = img
         #flip horizontal
         imgRGB = cv2.flip(imgRGB,1)
         results = hands.process(imgRGB)
