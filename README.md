@@ -5,9 +5,9 @@ PACKAGES
 
 - ROS (tested on kinetic and noetic)
 
--Python3
+- Python3
 
--Mediapipe
+- Mediapipe
 
 INSTRUCTIONS
 
